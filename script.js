@@ -1,5 +1,5 @@
-var videoPaths = ["videos/v1.mp4","videos/v2.mp4","videos/v3.mp4","videos/v4.mp4","videos/v5.mp4"];
-var videoNames = ["Video 1","Video 2","Video 3","Video 4","Wellerman",];
+var videoPaths = ["videos/v1.mp4","videos/v2.mp4","videos/v3.mp4","videos/v4.mp4","videos/v5.mp4","jhk.mp4"];
+var videoNames = ["Video 1","Video 2","Video 3","Video 4","Wellerman","Test"];
 
 var queue = [];
 var inUseQueue = [];
@@ -13,6 +13,15 @@ $("#prev").click(prevVideo);
 $("#start").click(start);
 
 var i = 0;
+
+for(var b = 0;b < videoPaths.length;b++){
+   var div = $('<div class="content"></div>');
+   var text = $('<h2>'+videoNames[b]+'</h2>');
+   var checkBox = $('<input type="checkbox" id="'+b+'" onclick="check(this.id)">');
+   div.append(text);
+   div.append(checkBox);
+   $(".grid").append(div);
+}
 
 $("#video").bind("ended", nextVideo);
 
@@ -47,6 +56,7 @@ $("#video").bind("ended", nextVideo);
       i = 0;
       inUseQueue = queue;
       video.src = videoPaths[inUseQueue[i]];
+      changeVideoTitle();
       video.play();
    }
 
