@@ -130,6 +130,14 @@ body {
   outline: none;
   font-weight: bold;
 }
+
+.player{
+
+}
+
+.video{
+  margin: 0 auto;
+}
 .movie-list-container {
   padding: 0 20px;
 }
