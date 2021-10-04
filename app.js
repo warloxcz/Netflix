@@ -2,7 +2,8 @@ const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 
 arrows.forEach((arrow, i) => {
-  const itemNumber = movieLists[i].querySelectorAll("img").length;
+  const itemNumber = movieLists[0].querySelectorAll("img").length;
+  console.log("I:"+itemNumber);
   let clickCounter = 0;
   arrow.addEventListener("click", () => {
     const ratio = Math.floor(window.innerWidth / 270);

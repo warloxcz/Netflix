@@ -246,20 +246,3 @@ body {
     display: none;
   }
 }
-div.player {
-  padding-top: 50px;
-  width: 70%;
-  margin: 0 auto;
-}
-.video-buttons{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 15px;
-}
-
-@media only screen and (max-width: 900px){
-  div.player {
-    width: 90%;
-  }
-}
