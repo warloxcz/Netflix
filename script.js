@@ -12,7 +12,8 @@ var videoTitle = $(".video-title");
 var video = document.getElementById('video');
 $("#next").click(nextVideo);
 $("#prev").click(prevVideo);
-$("#start").click(start);
+//$("#start").click(start);
+$(".b2").click(start);
 
 var i = 0;
 
@@ -57,6 +58,8 @@ $("#video").bind("ended", nextVideo);
    }
 
    function start(){
+      $(".player").css("display","block");
+      //$(".b2").css("display","none");
       i = 0;
       inUseQueue = queue;
       video.src = videoPaths[inUseQueue[i]];
