@@ -16,7 +16,7 @@ body {
 .navbar-container {
   display: flex;
   align-items: center;
-  background-color: blanchedalmond;
+  background-color: #1A0011;
   padding: 0 50px;
   height: 100%;
   color: white;
@@ -242,7 +242,7 @@ body {
   transform: translateX(-20px);
 }
 @media only screen and (max-width: 940px){
-  .menu-container{
+  div.sidebar{
     display: none;
   }
 }
