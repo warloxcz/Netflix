@@ -245,6 +245,26 @@ body {
   div.sidebar{
     display: none;
   }
+  .content-container {
+     margin-left: 0px; 
+  }
+  .movie-list-item-img {
+    width: 200px;
+    height: 150px;
+}
+.movie-list-item-desc {
+  width: 150px;
+}
+
+element.style {
+}
+.movie-list-item-title {
+    font-size: 22px;
+}
+.movie-list-item-button {
+  font-size: 12px;
+}
+  
 }
 div.player {
   padding-top: 50px;

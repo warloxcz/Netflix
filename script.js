@@ -17,9 +17,10 @@ $(".b2").click(start);
 
 var i = 0;
 
+
 for(var b = 0;b < videoPaths.length;b++){
    var content = $('<div class="movie-list-item"><img class="movie-list-item-img" src="'+videoImage[b]+'" alt=""><span class="movie-list-item-title">'+videoNames[b]+'</span><p class="movie-list-item-desc">'+videoText[b]+'</p><button class="movie-list-item-button" id="b'+b+'" onclick="check(this.id)">ADD</button><input type="checkbox" style="display: none" id="'+b+'" value="1"></div>');//
-   $(".movie-list").append(content);
+   $(".list").append(content);
 }
 
 checkboxs = $("input[type=checkbox]");
@@ -69,12 +70,17 @@ $("#video").bind("ended", nextVideo);
 
 });
 
-function getQueue(){
-   var out = "";
+function updateQueue(){
+  /* var out = "";
    for(var x = 0;x < queue.length;x++){
       out += videoNames[queue[x]]+ ", ";
    }
-   $(".queue").text(out);
+   $(".queue").text(out);*/
+   $(".queue").empty();
+   for(var b = 0;b < queue.length;b++){
+      var content = $('<div class="movie-list-item"><img class="movie-list-item-img" src="'+videoImage[queue[b]]+'" alt=""><span class="movie-list-item-title">'+videoNames[queue[b]]+'</span><p class="movie-list-item-desc">'+videoText[queue[b]]+'</p><input type="checkbox" style="display: none" id="'+b+'" value="1"></div>');
+      $(".queue").append(content);
+   }
 }
 
 function check(id){
@@ -110,6 +116,8 @@ function check(id){
          }
       }
    }
-   getQueue();
+   updateQueue();
+   console.log($(".queue"));
+   //getQueue();
 
  }
