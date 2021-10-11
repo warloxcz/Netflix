@@ -255,6 +255,10 @@ body {
 .movie-list-item-desc {
   width: 150px;
 }
+.arrow {
+  font-size: 80px;
+  top: 110px;
+}
 
 element.style {
 }
@@ -263,6 +267,11 @@ element.style {
 }
 .movie-list-item-button {
   font-size: 12px;
+}
+.navbar-container {
+
+  padding: 0 7px;
+
 }
   
 }
@@ -282,4 +291,9 @@ div.player {
   div.player {
     width: 90%;
   }
+}
+
+.logo {
+  
+  margin-left: 7px;
 }
